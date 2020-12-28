@@ -7,7 +7,7 @@
           v-html="headerTitle.title"
           @click="goHeaderTitle(headerTitle.id, headerTitle.live_url)"
         ></h1>
-        <section class="region1">
+        <!-- <section class="region1">
           <div
             class="swipes1"
             @mouseenter="swtichBt(true)"
@@ -106,9 +106,9 @@
           <div class="Carousel2">
             <section>
               <swiper :options="swiperOption1" v-if="swiperSlides.mid">
-                <!-- <swiper-slide>
+                <swiper-slide>
                   <img :src="swiperSlides.mid[1].image" @click="goAbout(0)" />
-                </swiper-slide>-->
+                </swiper-slide>
                 <swiper-slide v-for="item in swiperSlides.mid" :key="item.id">
                   <img
                     :src="item.image"
@@ -210,14 +210,13 @@
                 </swiper>
               </div>
               <div v-show="qrShow" class="qrcode">
-                <!-- <img src="../assets/qrcode.png" /> -->
                 <p>扫码关注 老年早报</p>
                 <p>每日为您提供最新资讯</p>
               </div>
             </div>
           </div>
-        </section>
-        <section class="region5">
+        </section> -->
+        <!-- <section class="region5">
           <div class="icon-title">
             <span>省</span>
             <span>级</span>
@@ -255,7 +254,7 @@
             :key="link.title"
             :re-links="link"
           ></related-links>
-        </section>
+        </section> -->
       </div>
     </div>
   </div>
@@ -263,10 +262,9 @@
 
 <script>
 import { carousel, artiles } from "@/assets/data/homeData";
-import Announcement from "@/components/home/Announcement";
-import Activity from "@/components/home/Activity";
-import HomeApi from "@/api/homeApi";
-import RelatedLinks from "@/components/home/RelatedLinks";
+// import Announcement from "@/components/home/Announcement";
+// import Activity from "@/components/home/Activity";
+// import RelatedLinks from "@/components/home/RelatedLinks";
 import store from "../store";
 
 export default {
@@ -313,45 +311,7 @@ export default {
     };
   },
   created: function () {
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?b2de2dd0e74c16405b189504914f693c";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    this.swiperSlides = carousel.data;
-
-    let map = {
-      时政要闻: "/1",
-      协会新闻: "/2",
-      通知通告: "/3",
-      政策文件: "/1",
-      党建新闻: "/0",
-      会员动态: "/4",
-    };
-
-    let temp = artiles.data;
-    Object.keys(temp).forEach((item1) => {
-      temp[item1].forEach((item2) => {
-        item2.href = "/" + item2.belongCategory + map[item2.title];
-      });
-    });
-    this.articles = artiles.data;
-
-    // HomeApi.getMembers().then((data) => {
-    //   this.members = data.data;
-    // });
-    // HomeApi.getExhibitions().then((data) => {
-    //   this.exhibitions = data.data;
-    // });
-    // HomeApi.getFootArticleList().then((res) => {
-    //   this.activityData = res.data;
-    // });
-    // HomeApi.getSchoolStationList().then((res) => {
-    //   this.links = res.data;
-    // });
-    console.log(this.$route.path);
+   
   },
   methods: {
     showQR: function (bl) {
@@ -453,7 +413,8 @@ export default {
             padding-top: 30px;
             padding-left: 20px;
             padding-bottom: 15px;
-            background-image: url("../assets/images/home/Mask.png");
+            background: #000000;
+            // background-image: url("../assets/images/home/Mask.png");
             background-size: 100% 100%;
             box-sizing: border-box;
             & > h3 {
