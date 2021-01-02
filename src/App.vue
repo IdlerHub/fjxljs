@@ -22,7 +22,11 @@
       mode="horizontal"
       @select="handleSelect"
     >
-      <el-menu-item class="level-one" index="1" @click="selectedNav('/', 1)"
+      <el-menu-item
+        class="level-one"
+        index="0"
+        :class="{ _active: nav == 0 }"
+        @click="selectedNav('Home', 1)"
         >首页</el-menu-item
       >
 
@@ -32,17 +36,22 @@
         :index="index + ''"
       >
         <template slot="title">
-          <span class="level-one" @click="selectedNav(item.href, index + 2)">{{
-            item.label
-          }}</span>
+          <span
+            class="level-one"
+            :class="{ _active: nav == index + 1 }"
+            @click="selectedNav(item.href, index)"
+            >{{ item.label }}</span
+          >
         </template>
         <!-- 二级目录 -->
-        <el-menu-item
-          v-for="(child, cIndex) in item.subNav"
-          :key="cIndex"
-          :index="cIndex + ''"
-          >{{ child.label }}</el-menu-item
-        >
+        <template v-if="item.subNav">
+          <el-menu-item
+            v-for="(child, cIndex) in item.subNav"
+            :key="cIndex"
+            :index="cIndex + ''"
+            >{{ child.label }}</el-menu-item
+          >
+        </template>
       </el-submenu>
     </el-menu>
     <!-- 内容页面 -->
@@ -58,8 +67,8 @@
         </span>
       </div>
       <div>
-        地址：福建省厦门市xxx地方，邮政编码：100123 办公室电话：094-2665555
-        传真：0594-8989 电子邮箱：welltodo9834@163.com
+        地址：{{companyInfo.address}}，邮政编码：{{companyInfo.postaCode}} 办公室电话：{{companyInfo.phone}}
+        传真：{{companyInfo.faxNumber}} 电子邮箱：{{companyInfo.email}}
       </div>
       <div>
         本站最佳浏览效果：1024*768分辨率/建议使用Chrome浏览器或微软公司浏览器IE11以上
@@ -69,35 +78,53 @@
 </template>
 
 <script>
-import { FRIENDLY_LINK, NAVIGATORList } from "../src/assets/data/appData";
+import { FRIENDLY_LINK, NAVIGATORList, COMPANY_INFO } from "../src/assets/data/appData";
+import Filter from "./utils/filters";
+
 export default {
   name: "App",
   data() {
     return {
       navigatorList: NAVIGATORList, //nav栏
       friendlyLink: FRIENDLY_LINK, //友情链接
+      oldSelected: [],
+      companyInfo: COMPANY_INFO //企业信息
     };
   },
-  mounted() {
-    console.log(this.$router.path);
-  },
   methods: {
+    // 二级菜单跳转
     handleSelect(index, indexPath) {
-      // this.nav = parseInt(indexPath[0]) + 2;
-      indexPath.length < 2
-        ? ""
-        : this.$router.push(this.navigators[indexPath[0]].href + "/" + index);
+      console.log("二级菜单跳转", index, indexPath);
+      if (this.oldSelected == indexPath) {
+        return;
+      } else {
+        this.oldSelected = indexPath;
+        this.$router.push({
+          name: this.navigatorList[indexPath[0]].href,
+          query: {
+            id: index,
+          },
+        });
+      }
     },
     // 选择标签跳转
-    selectedNav(path, n) {
-      console.log(path, n);
-      // this.$router.push({ path });
-      // setTimeout(() => {
-      //   this.$refs["el-menu"].close(n - 2 + "");
-      // }, 400);
+    selectedNav(name, n) {
+      console.log(name, n);
+      if (this.$route.name != name) {
+        if (name == "Home") {
+          this.$router.push({ name: name });
+        } else {
+          this.$router.push({ name: name, query: { id: n } });
+        }
+      }
     },
   },
-  computed: {},
+  computed: {
+    nav: function() {
+      const name = this.$route.name;
+      return Filter.HomeNavFilter(name);
+    },
+  },
 };
 </script>
 
@@ -199,10 +226,10 @@ export default {
 
 // 底部
 .fjxl-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
   text-align: center;
   background: #104c8b;
   min-width: 1200px;
@@ -307,5 +334,13 @@ export default {
       color: #409eff !important;
     }
   }
+}
+
+// 当前激活样式
+._active {
+  opacity: 1;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.51px;
 }
 </style>

@@ -1,2 +1,118 @@
-export const carousel = { "code": 1, "msg": "获取成功", "time": "1609081911", "data": { "head": [{ "id": 147, "author": "管理员", "title": "关于使用网上老年大学APP，积极响应国务院 “切实解决老年人运用智能技术困难”的实施办法", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201223\/87302\/e3e187845253c51aa0ed2f35135d9ca6.jpg", "position": "head", "clickurl": "", "weigh": 146, "createtime": 1608690460, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 146, "author": "管理员", "title": "关于印发《中国老年大学协会 智慧助老行动三年计划》的通知", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201222\/51872\/37878541bbc5e1025abace55546be9d7.png", "position": "head", "clickurl": "", "weigh": 145, "createtime": 1608625446, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 125, "author": "管理员", "title": "关于组织开展“线上直播教学”的通知", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201014\/24935\/489d4eac699173624a7c9acb2934bb99.jpg", "position": "head", "clickurl": "", "weigh": 115, "createtime": 1599098432, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }], "mid": [{ "id": 20, "author": "中国老年大学协会", "title": "七集政论专题片 《不忘初心 继续前进》", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/\/uploads\/images\/4930534fed55c1dcc79399e829df8df7.jpg", "position": "mid", "clickurl": "http:\/\/www.gov.cn\/zhuanti\/201710bwcxztp\/bwcxztp.html", "weigh": 20, "createtime": 1561539683, "status": 1, "jump_type": 0, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 15, "author": "中国老年大学协会", "title": "中国老年大学协会办学宗旨", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/\/uploads\/images\/6558e0b033d0c506449c397fe90f8358.jpg", "position": "mid", "clickurl": "http:\/\/www.gov.cn\/zhuanti\/201710bwcxztp\/bwcxztp.html", "weigh": 15, "createtime": 1555313081, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }], "foot": [{ "id": 143, "author": "管理员", "title": "来自海拔8848.86米的报告 ", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201209\/56130\/395c1415f2314d75a3c6842328050d10.jpg", "position": "foot", "clickurl": "", "weigh": 142, "createtime": 1607479730, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 141, "author": "管理员", "title": "夜航三峡", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201115\/30414\/13a16e38e7b1a2a5118fb61057bd1535.jpg", "position": "foot", "clickurl": "", "weigh": 140, "createtime": 1605427281, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 140, "author": "管理员", "title": "探访中国（黑龙江）自由贸易试验区哈尔滨片区", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201115\/94059\/88dc169957b962ad0a998d38b4abf6e6.jpg", "position": "foot", "clickurl": "", "weigh": 139, "createtime": 1605427101, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }, { "id": 139, "author": "管理员", "title": "山西运城：火烈鸟连续六年盐湖越冬", "image": "https:\/\/xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443\/uploads\/images\/20201115\/92618\/0793bf42649c497faf85f80840526b99.jpg", "position": "foot", "clickurl": "", "weigh": 138, "createtime": 1605427004, "status": 1, "jump_type": 1, "jump_type_categoryid": 0, "jump_type_categoryname": "" }] } }
-export const artiles = { "code": 1, "msg": "获取成功", "time": "1609081911", "data": { "block1": [{ "id": 3, "belongCategory": "news", "title": "时政要闻", "list": [{ "id": 2663, "type": 3, "title": "第二届新时代积极应对人口老龄化 高端研讨会在京举行", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 30, "weigh": 2663, "collection": 0, "createtime": 1608780797, "rec_status": 1, "status": 1 }, { "id": 2658, "type": 3, "title": "老年代步车乱象频发 如何破解老年人出行难题？", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 9, "weigh": 2658, "collection": 0, "createtime": 1608774392, "rec_status": 1, "status": 1 }, { "id": 2657, "type": 3, "title": "人大常委会第二十四次会议举行第二次全体会议", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 4, "weigh": 2657, "collection": 0, "createtime": 1608774162, "rec_status": 1, "status": 1 }, { "id": 2655, "type": 3, "title": "汪洋主持召开全国政协主席会议", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 4, "weigh": 2655, "collection": 0, "createtime": 1608620097, "rec_status": 1, "status": 1 }, { "id": 2654, "type": 3, "title": "疾控专家提醒：新冠疫苗与HPV疫苗应分开接种 元旦春节减少流动", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 5, "weigh": 2654, "collection": 0, "createtime": 1608600426, "rec_status": 1, "status": 1 }, { "id": 2644, "type": 3, "title": "习近平同坦桑尼亚总统马古富力通电话", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 0, "weigh": 2644, "collection": 0, "createtime": 1608168411, "rec_status": 1, "status": 1 }] }, { "id": 4, "belongCategory": "news", "title": "协会新闻", "list": [{ "id": 2653, "type": 4, "title": "关于使用网上老年大学 APP，积极响应国务院 “切实解决老年人运用智能技术困难”的实施办法", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 86, "weigh": 2653, "collection": 0, "createtime": 1608548575, "rec_status": 1, "status": 1 }, { "id": 2636, "type": 4, "title": "中国老年大学协会教材指导委员会第二次全体会议与会代表到我校考察指导", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 77, "weigh": 2636, "collection": 0, "createtime": 1607997611, "rec_status": 1, "status": 1 }, { "id": 2634, "type": 4, "title": "全国专家学者齐聚南宁共探老年大学教育事业", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 85, "weigh": 2634, "collection": 0, "createtime": 1607928486, "rec_status": 1, "status": 1 }, { "id": 2633, "type": 4, "title": "关于全国老年大学统编教材推广使用的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 72, "weigh": 2633, "collection": 0, "createtime": 1607928409, "rec_status": 1, "status": 1 }, { "id": 2622, "type": 4, "title": "中国老年大学协会考察团来盛泉考察调研", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 55, "weigh": 2622, "collection": 0, "createtime": 1607582382, "rec_status": 1, "status": 1 }, { "id": 2608, "type": 4, "title": "关于举办万人抗疫健步走活动的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 62, "weigh": 2608, "collection": 0, "createtime": 1606965566, "rec_status": 1, "status": 1 }] }], "block2": [{ "id": 5, "belongCategory": "news", "title": "通知通告", "list": [{ "id": 2652, "type": 5, "title": "关于印发《中国老年大学协会 智慧助老行动三年计划》的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 565, "weigh": 2652, "collection": 0, "createtime": 1608548247, "rec_status": 1, "status": 1 }, { "id": 2649, "type": 5, "title": "关于举办首届全国老年大学运动会 “线上智力竞技大赛”学习班的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 133, "weigh": 2649, "collection": 0, "createtime": 1608191177, "rec_status": 1, "status": 1 }, { "id": 2632, "type": 5, "title": "关于全国老年大学统编教材 推广使用的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 131, "weigh": 2632, "collection": 0, "createtime": 1607928345, "rec_status": 1, "status": 1 }, { "id": 2610, "type": 5, "title": "全国老龄工作委员会关于印发《全国老龄工作委员会专家委员会章程》及第一届专家委员名单的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 160, "weigh": 2610, "collection": 0, "createtime": 1606994436, "rec_status": 1, "status": 1 }, { "id": 2607, "type": 5, "title": "关于举办万人抗疫健步走活动的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 2838, "weigh": 2607, "collection": 0, "createtime": 1606963866, "rec_status": 1, "status": 1 }, { "id": 2593, "type": 5, "title": "关于贯彻落实《国务院办公厅印发关于切实解决老年人 运用智能技术困难实施方案的通知》的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 555, "weigh": 2590, "collection": 0, "createtime": 1606490647, "rec_status": 1, "status": 1 }, { "id": 2571, "type": 5, "title": "关于首届全国老年大学运动会延期举办的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 177, "weigh": 2571, "collection": 0, "createtime": 1605425445, "rec_status": 1, "status": 1 }] }, { "id": 9, "belongCategory": "policy_building", "title": "政策文件", "list": [{ "id": 2585, "type": 9, "title": "安徽省人民代表大会常务委员会公告", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 101, "weigh": 2585, "collection": 0, "createtime": 1606196085, "rec_status": 1, "status": 1 }, { "id": 2581, "type": 9, "title": "《安徽省老年教育条例》将于明年1月1起施行", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 51, "weigh": 2581, "collection": 0, "createtime": 1605837210, "rec_status": 1, "status": 1 }, { "id": 742, "type": 9, "title": "中共贵州省委办公厅关于转发《贵州省老年 教育发展“十三五”规划》的 通知", "image": "0", "file_url": "0", "file_name": null, "live_url": null, "author": "管理员", "browse": 334, "weigh": 742, "collection": 0, "createtime": 1562137406, "rec_status": 0, "status": 1 }, { "id": 498, "type": 9, "title": "关于印发《湖南省老年教育发展规划（2019－2022年）》的通知", "image": "0", "file_url": "0", "file_name": null, "live_url": null, "author": "管理员", "browse": 417, "weigh": 498, "collection": 0, "createtime": 1555862400, "rec_status": 0, "status": 1 }, { "id": 501, "type": 9, "title": "湖南省老年教育发展规划（2019－2022年）", "image": "0", "file_url": "0", "file_name": null, "live_url": null, "author": "管理员", "browse": 560, "weigh": 501, "collection": 0, "createtime": 1552233600, "rec_status": 0, "status": 1 }, { "id": 494, "type": 9, "title": "成都市人民政府办公厅关于加快老年教育发展的实施意见", "image": "0", "file_url": "0", "file_name": null, "live_url": null, "author": "管理员", "browse": 736, "weigh": 494, "collection": 0, "createtime": 1533052800, "rec_status": 0, "status": 1 }, { "id": 492, "type": 9, "title": "兵团老年教育发展规划（2016-2020年）", "image": "0", "file_url": "0", "file_name": null, "live_url": null, "author": "管理员", "browse": 1104, "weigh": 492, "collection": 0, "createtime": 1502380800, "rec_status": 0, "status": 1 }] }], "block3": [{ "id": 8, "belongCategory": "policy_building", "title": "党建新闻", "list": [{ "id": 2666, "type": 8, "title": "实施积极应对人口老龄化国家战略", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 16, "weigh": 2666, "collection": 0, "createtime": 1608781899, "rec_status": 1, "status": 1 }, { "id": 2660, "type": 8, "title": "抚州市老年大学 “四抓四促”提升党建水平", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 5, "weigh": 2660, "collection": 0, "createtime": 1608775151, "rec_status": 1, "status": 1 }, { "id": 2650, "type": 8, "title": "【领导干部讲党课】济南市委老干部局副局长、济南老年人大学校长温洪军同志为全体党员干部讲党课", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 11, "weigh": 2650, "collection": 0, "createtime": 1608195045, "rec_status": 1, "status": 1 }, { "id": 2648, "type": 8, "title": "科学谋划“十四五”社会组织高质量发展", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 15, "weigh": 2648, "collection": 0, "createtime": 1608190641, "rec_status": 1, "status": 1 }, { "id": 2645, "type": 8, "title": "牡丹江老年大学学员党委 学习宣传党的十九届五中全会精神", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 8, "weigh": 2645, "collection": 0, "createtime": 1608189625, "rec_status": 1, "status": 1 }, { "id": 2599, "type": 8, "title": "成都四所老年大学举行学习党的十九届五中全会精神暨工作交流会", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 96, "weigh": 2599, "collection": 0, "createtime": 1606734256, "rec_status": 1, "status": 1 }, { "id": 2540, "type": 8, "title": "尧都区老年大学贯彻学习中国老年大学协会“不忘初心砥砺前行，第二期主题教育党建工作”会议精神", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 43, "weigh": 2540, "collection": 0, "createtime": 1604293465, "rec_status": 1, "status": 1 }] }, { "id": 6, "belongCategory": "news", "title": "会员动态", "list": [{ "id": 2667, "type": 6, "title": "岁末盘点 展望未来 ——成都市双流区、镇（街道）老年大学2020年工作总结会", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 4, "weigh": 2667, "collection": 0, "createtime": 1608782540, "rec_status": 1, "status": 1 }, { "id": 2662, "type": 6, "title": "武汉市汉阳区老年大学-圆满收官创佳绩共谋开局再起航", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 5, "weigh": 2662, "collection": 0, "createtime": 1608777610, "rec_status": 1, "status": 1 }, { "id": 2661, "type": 6, "title": "成都高新区中和街道老年大学召开教师学习座谈会", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 3, "weigh": 2661, "collection": 0, "createtime": 1608776324, "rec_status": 1, "status": 1 }, { "id": 2659, "type": 6, "title": "科技伴生活，越活越年轻 ——济南老年人大学送课进社区之海泊社区", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 4, "weigh": 2659, "collection": 0, "createtime": 1608774826, "rec_status": 1, "status": 1 }, { "id": 2656, "type": 6, "title": "喜讯！厦门老年大学荣膺首批福建省高水平示范性老年大学", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 14, "weigh": 2656, "collection": 0, "createtime": 1608711081, "rec_status": 1, "status": 1 }, { "id": 2647, "type": 6, "title": "广西老年大学送课下基层 积极助力基层老年教育发展", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 10, "weigh": 2647, "collection": 0, "createtime": 1608190506, "rec_status": 1, "status": 1 }, { "id": 2625, "type": 6, "title": "芜湖老年大学发起“数字鸿沟”扫盲行动", "image": "0", "file_url": "0", "file_name": null, "live_url": "", "author": "管理员", "browse": 21, "weigh": 2625, "collection": 0, "createtime": 1607587492, "rec_status": 1, "status": 1 }] }] } }
+export const carousel = {
+  head: [
+    //顶部轮播图
+    {
+      id: 147,
+      author: "管理员",
+      title:
+        "关于使用网上老年大学APP，积极响应国务院 “切实解决老年人运用智能技术困难”的实施办法",
+      image:
+        "https://xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443/uploads/images/20201223/87302/e3e187845253c51aa0ed2f35135d9ca6.jpg",
+      position: "head",
+      clickurl: "",
+      weigh: 146,
+      createtime: "2020-12-12",
+      status: 1,
+      jump_type: 1,
+      jump_type_categoryid: 0,
+      jump_type_categoryname: "",
+    },
+    {
+      id: 146,
+      author: "管理员",
+      title: "关于印发《中国老年大学协会 智慧助老行动三年计划》的通知",
+      image:
+        "https://xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443/uploads/images/20201222/51872/37878541bbc5e1025abace55546be9d7.png",
+      position: "head",
+      clickurl: "",
+      weigh: 145,
+      createtime: "2020-12-12",
+      status: 1,
+      jump_type: 1,
+      jump_type_categoryid: 0,
+      jump_type_categoryname: "",
+    },
+    {
+      id: 125,
+      author: "管理员",
+      title: "关于组织开展“线上直播教学”的通知",
+      image:
+        "https://xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443/uploads/images/20201014/24935/489d4eac699173624a7c9acb2934bb99.jpg",
+      position: "head",
+      clickurl: "",
+      weigh: 115,
+      createtime: "2020-12-12",
+      status: 1,
+      jump_type: 1,
+      jump_type_categoryid: 0,
+      jump_type_categoryname: "",
+    },
+  ],
+  mid: [
+    //中间轮播图
+    {
+      id: 20,
+      author: "中国老年大学协会",
+      title: "七集政论专题片 《不忘初心 继续前进》",
+      image:
+        "https://xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443//uploads/images/4930534fed55c1dcc79399e829df8df7.jpg",
+      position: "mid",
+      clickurl: "http://www.gov.cn/zhuanti/201710bwcxztp/bwcxztp.html",
+      weigh: 20,
+      createtime: "2020-12-12",
+      status: 1,
+      jump_type: 0,
+      jump_type_categoryid: 0,
+      jump_type_categoryname: "",
+    },
+    {
+      id: 15,
+      author: "中国老年大学协会",
+      title: "中国老年大学协会办学宗旨",
+      image:
+        "https://xiehui-guanwang.obs.cn-north-1.myhuaweicloud.com:443//uploads/images/6558e0b033d0c506449c397fe90f8358.jpg",
+      position: "mid",
+      clickurl: "http://www.gov.cn/zhuanti/201710bwcxztp/bwcxztp.html",
+      weigh: 15,
+      createtime: "2020-12-12",
+      status: 1,
+      jump_type: 1,
+      jump_type_categoryid: 0,
+      jump_type_categoryname: "",
+    },
+  ],
+};
+
+// 服务范围
+export const servicesList = [
+  {
+    id: 203,
+    nickname: "建筑是建筑物语构筑物的总称,是人们为了满足社会生活需要,利用所掌握的物质",
+    avatar:
+      "https://images.mituo.cn/mui005/upload/201801/1516001909.png",
+  },
+  {
+    id: 203,
+    nickname: "建筑是建筑物语构筑物的总称,是人们为了满足社会生活需要,利用所掌握的物质",
+    avatar:
+      "https://images.mituo.cn/mui005/upload/201801/1516001295.png",
+  },
+  {
+    id: 203,
+    nickname: "建筑是建筑物语构筑物的总称,是人们为了满足社会生活需要,利用所掌握的物质",
+    avatar:
+      "https://images.mituo.cn/mui005/upload/201801/1516001587.png",
+  },
+  {
+    id: 203,
+    nickname: "建筑是建筑物语构筑物的总称,是人们为了满足社会生活需要,利用所掌握的物质",
+    avatar:
+      "https://images.mituo.cn/mui005/upload/201801/1516008205.png",
+  },
+  {
+    id: 203,
+    nickname: "建筑是建筑物语构筑物的总称,是人们为了满足社会生活需要,利用所掌握的物质",
+    avatar:
+      "https://images.mituo.cn/mui005/upload/201801/1516008093.png",
+  },
+]
