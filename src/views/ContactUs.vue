@@ -3,21 +3,21 @@
     <!-- 头部导航栏 -->
     <detail-nav
       :navtitle="title"
-      :navTitleChild="contanctList[showLeft]"
+      :navTitleChild="contanctList[contanctId]"
     ></detail-nav>
     <div class="content-box">
       <!-- 左边侧边栏 -->
       <left-tab
         :leftTitle="title"
         :LeftList="contanctList"
-        :showLeft="showLeft"
+        :showLeft="contanctId"
         @handleClickLeft="handleClickLeft"
       ></left-tab>
       <div class="contact-right">
         <div class="contact-content">
           <div class="contact-title">
             <nav>
-              <span>{{ contanctList[showLeft] }}</span>
+              <span>{{ contanctList[contanctId] }}</span>
             </nav>
           </div>
           <div class="contact-address">
@@ -46,7 +46,8 @@ export default {
     return {
       title: "联系我们",
       contanctList: ["联系方式"],
-      showLeft: 0,
+      contanctId: 0,
+      showLeft: 6,
       companyInfo: COMPANY_INFO,
     };
   },
@@ -54,10 +55,17 @@ export default {
     DetailNav,
     LeftTab,
   },
+   mounted() {
+    this.contanctId = this.$route.query.id;
+    this.title = NAVIGATORList[this.showLeft].label;
+    NAVIGATORList[this.showLeft].subNav.forEach((item) => {
+      this.manageLeftList.push(item.label);
+    });
+  },
   methods: {
     handleClickLeft(index) {
       this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
-      this.showLeft = index;
+      this.contanctId = index;
     },
   },
 };

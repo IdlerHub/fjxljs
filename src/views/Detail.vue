@@ -56,7 +56,7 @@
           </p>
         </div>
         <p class="user-name" v-if="aboutUsDetail[detailId].userName">
-          <img :src="aboutUsDetail[detailId].userName" alt="黄" />
+          <img :src="aboutUsDetail[detailId].userName" alt="黄金钟" />
         </p>
         <p class="footer">{{ aboutUsDetail[detailId].footer }}</p>
       </div>

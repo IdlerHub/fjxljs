@@ -59,8 +59,8 @@ export default {
   name: "NewsContent",
   data() {
     return {
-      title: "新闻资讯",
-      subTitle: "行业动态",
+      title: "",
+      subTitle: "",
       showFont: true, //展示字体选择
       radio4: "大",
       articlecont: {}, //文章内容
@@ -71,24 +71,9 @@ export default {
     DetailNav,
   },
   mounted() {
-    this.setSubtitle(this.$route.query.nav)
     this.setArticle();
   },
   methods: {
-    //设置副标题
-    setSubtitle(nav){
-      switch(nav) {
-        case '0': 
-          this.subTitle = "行业动态"
-          break;
-        case '1': 
-          this.subTitle = '公司新闻'
-          break;
-        default:
-          　this.subTitle = '文章详情'
-        break;
-      }
-    },
     // 根据id获取对应文章
     setArticle() {
       this.articlecont = INDUSTRY_CONTENT[0];
@@ -174,7 +159,7 @@ $pd-lf: padding-left;
     margin-top: 6px;
   }
   &:hover {
-    background: #c52e0f !important;
+    background: #104c8b !important;
     color: #ffffff !important;
     cursor: pointer !important;
   }
@@ -247,7 +232,7 @@ a:active {
       }
     }
     & > input:checked + span {
-      background: #c52e0f !important;
+      background: #104c8b !important;
     }
   }
 }

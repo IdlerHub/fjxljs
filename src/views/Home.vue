@@ -27,10 +27,7 @@
             <header>公司简介</header>
             <div class="about-us-content">
               <article>
-                福建新朗建设有限公司协会是中华人民共和国民政部部属社团，业务由全国老龄工作委员会办公室主管，成立于1988年12月。福建新朗建设有限公司协会英文译名China
-                Association of the Universities For The Aged ( CAUA
-                )，是组织全国各地新朗建设有限公司（含地方新朗建设有限公司协会和老年学校）开展协作与交流的全国性非营利社会组织，联系着全国7万多所新朗建设有限公司和老年学校，
-                800多万在校学员，以及参加远程教育的数百万学员
+                福建新朗建设有限公司是一家集公路、水利、房建、市政于一体的大型综合性建筑企业。公司创建于2012年09月，公司现有公路工程施工总承包二级、公路交通工程（公路安全设施分项）专业承包二级、水利水电施工总承包叁级、房屋建筑工程施工总承包叁级、市政公用工程施工总承包叁级及钢结构工程专业承包叁级、古建筑工程专业承包叁级、环保工程专业承包叁级、城市及道路照明工程专业承包叁级等经营资质。
               </article>
             </div>
             <div class="footer">
@@ -66,7 +63,7 @@
                   v-for="(slide, index) in swiperSlides.head"
                   :key="index"
                 >
-                  <img :src="slide.image" @click="toSwiperDetial" />
+                  <img :src="slide.image" @click.stop="toSwiperDetial(slide)" />
                   <div class="Carousel-title">
                     <h3>{{ slide.title }}</h3>
                   </div>
@@ -83,14 +80,13 @@
         </section>
 
         <!-- 服务范围  -->
-        <div class="service_list_met_11_1_55 text-xs-center" m-id="55">
+        <!-- <div class="service_list_met_11_1_55 text-xs-center" m-id="55">
           <div class="service-container">
             <div class="head">
               <h2 class="title">
                 服务范围
               </h2>
             </div>
-            <!-- 服务轮播 -->
             <section class="service">
               <vue-seamless-scroll
                 class="seamless-warp"
@@ -110,7 +106,7 @@
               </vue-seamless-scroll>
             </section>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -159,9 +155,9 @@ export default {
     swtichBt: function(bl) {
       this.btSwitch = bl;
     },
-    toSwiperDetial() {
+    toSwiperDetial(slide) {
       console.log("轮播详情");
-      this.$router.push({name: 'Detail'})
+      this.$router.push({name: 'SuccessDemo', query: {id: 0}})
     },
     toAboutDetail() {
       console.log("去公司简章")
@@ -229,6 +225,7 @@ export default {
             // background-image: url("../assets/images/home/Mask.png");
             background-size: 100% 100%;
             box-sizing: border-box;
+            text-align: left;
             & > h3 {
               margin: 0;
               width: 70%;
@@ -371,7 +368,7 @@ export default {
             border: 0;
 
             &:hover {
-              background: #c52e0f;
+              background: #104c8b;
               color: white;
               cursor: pointer !important;
             }
@@ -379,7 +376,7 @@ export default {
 
           .register {
             width: 100%;
-            background: #c52e0f;
+            background: #104c8b;
             font-family: PingFangSC-Semibold;
             font-size: 20px;
             color: #ffffff;

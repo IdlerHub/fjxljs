@@ -7,12 +7,12 @@
         @mouseenter="changeAn(0)"
         @click="navTo(msg[0].href)"
       >{{msg[0].title}}</p>
-      <span class="division-line">|</span>
+      <span class="division-line" v-if="msg.length > 1">|</span>
       <p
         class="title"
+        v-if="msg.length > 1"
         :class="{ active:aim }"
         @mouseenter="changeAn(1)"
-        @click="navTo(msg[1].href)"
       >{{msg[1].title}}</p>
     </div>
     <ul class="an-list" :class="{custom:custom}">
@@ -90,10 +90,10 @@ export default {
 
     .title.active {
       font-size: 20px;
-      color: #c52e0f;
+      color: #104c8b;
       letter-spacing: 0.57px;
       text-align: center;
-      border-bottom: 2px solid #c52e0f;
+      border-bottom: 2px solid #104c8b;
     }
   }
 
@@ -137,12 +137,12 @@ export default {
         letter-spacing: 0.46px;
         text-align: left;
         &:hover {
-          color: #c52e0f;
+          color: #104c8b;
         }
       }
 
       .time {
-        width: 100px;
+        width: 140px;
         text-align: right;
         margin-right: 3px;
         font-size: 15px;

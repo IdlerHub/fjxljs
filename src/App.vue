@@ -3,7 +3,7 @@
     <header class="header">
       <div class="logo-img">
         <!--背景图片-->
-        <img src="./assets/logo.png" />
+        <!-- <img src="./assets/logo.png" /> -->
       </div>
       <!-- <p class="dialog-search">
         <el-input placeholder="请输入要查询的内容" v-model="searchKey" @keyup.enter.native="handleSearch">
@@ -114,15 +114,15 @@ export default {
         if (name == "Home") {
           this.$router.push({ name: name });
         } else {
-          this.$router.push({ name: name, query: { id: n } });
+          this.$router.push({ name: name, query: { id: 0 } });
         }
       }
     },
   },
   computed: {
     nav: function() {
-      const name = this.$route.name;
-      return Filter.HomeNavFilter(name);
+        const name = this.$route.name;
+        return Filter.HomeNavFilter(name);
     },
   },
 };

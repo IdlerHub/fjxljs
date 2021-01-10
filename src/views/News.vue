@@ -3,25 +3,25 @@
     <!-- 头部导航栏 -->
     <detail-nav
       :navtitle="title"
-      :navTitleChild="newsLeftList[showLeft]"
+      :navTitleChild="newsLeftList[newsId]"
     ></detail-nav>
     <div class="content-box">
       <left-tab
         :leftTitle="title"
         :LeftList="newsLeftList"
-        :showLeft="showLeft"
+        :showLeft="newsId"
         @handleClickLeft="handleClickLeft"
       ></left-tab>
       <div class="news-right">
         <div class="newscontent">
           <div>
             <nav>
-              <span>{{ newsLeftList[showLeft] }}</span>
+              <span>{{ newsLeftList[newsId] }}</span>
             </nav>
             <ul>
               <li
                 @click="toDetail(item)"
-                v-for="(item, index) in newsList[showLeft]['totalList'][
+                v-for="(item, index) in newsList[newsId]['totalList'][
                   currentPage - 1
                 ].list"
                 :key="index"
@@ -50,6 +50,8 @@
 import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
 import { NEWS_LIST } from "../assets/data/newsData";
+import { NAVIGATORList } from "../assets/data/appData";
+
 export default {
   name: "News",
   components: {
@@ -58,22 +60,27 @@ export default {
   },
   data() {
     return {
-      title: "新闻资讯",
-      newsLeftList: ["行业动态", "公司新闻"],
-      showLeft: 0,
+      title: "",
+      newsLeftList: [],
+      showLeft: 2,
+      newsId: 0,
       newsList: NEWS_LIST,
       currentPage: 1,
       totalNum: 5, //文章总数量
     };
   },
   mounted() {
-    this.totalNum = this.newsList[this.showLeft].totalNum;
+    this.newsId = this.$route.query.id;
+    this.title = NAVIGATORList[this.showLeft].label;
+    NAVIGATORList[this.showLeft].subNav.forEach((item) => {
+      this.newsLeftList.push(item.label);
+    });
   },
   methods: {
     // 左侧点击
     handleClickLeft(index) {
       this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
-      this.showLeft = index;
+      this.newsId = index;
       this.currentPage = 1;
     },
     // 切换下标
@@ -87,7 +94,7 @@ export default {
       let routeData = this.$router.resolve({
         name: "NewsContent",
         query: {
-          nav: this.showLeft,
+          nav: this.newsId,
           id: item.id
         }
       });
@@ -96,8 +103,8 @@ export default {
   },
   watch: {
     $route() {
-      if (this.$route.query.id != this.showLeft) {
-        this.showLeft = this.$route.query.id;
+      if (this.$route.query.id != this.newsId) {
+        this.newsId = this.$route.query.id;
       }
     },
   },
@@ -385,12 +392,12 @@ $pd-lf: padding-left;
         font-size: 14px !important;
         @include font-style(PingFangSC-Regular, 14px, #3a3a3a, 400);
         &:hover {
-          background: #c52e0f !important;
+          background: #104c8b !important;
           color: #fff !important;
         }
       }
       & > .active {
-        background: #c52e0f !important;
+        background: #104c8b !important;
         color: #fff;
       }
     }

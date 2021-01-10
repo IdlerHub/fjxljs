@@ -7,10 +7,12 @@ const HomeNavFilter = (name) => {
     case "Manage":
       return 2;
     case "News":
+    case "NewsContent":
       return 3;
     case "SuccessDemo":
       return 4;
     case "Column":
+    case "ColumnDetail":
       return 5;
     case "Technology":
       return 6;

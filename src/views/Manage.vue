@@ -23,50 +23,59 @@
             :key="index"
           >
             <p class="b-title-bold">{{ title.title }}</p>
-            <p v-for="(text,tIndex) in title.text" :key="tIndex">{{ text }}</p>
+            <p v-for="(text, tIndex) in title.text" :key="tIndex">{{ text }}</p>
           </div>
         </div>
-        
+
         <!-- 普通文本段落 -->
-        <div class="content" v-else-if="manageDetail[manageId].type == 'img-text'">
-          <div class="content-box" v-for="(item,index) in manageDetail[manageId].content" :key="index">
-            <img :src="item.img" alt>
-            <p>{{item.text}}</p>
+        <div
+          class="content"
+          v-else-if="manageDetail[manageId].type == 'img-text'"
+        >
+          <div class="manage-list">
+            <div
+              class="manage-box"
+              v-for="(item, index) in manageDetail[manageId].content"
+              :key="index"
+            >
+              <img :src="item.img" alt />
+              <div>{{ item.text }}</div>
+            </div>
           </div>
         </div>
-        <p class="user-name" v-if="manageDetail[manageId].userName">
-          <img :src="manageDetail[manageId].userName" alt="黄" />
-        </p>
-        <p class="footer">{{ manageDetail[manageId].footer }}</p>
       </div>
     </div>
+    <mask-img :image="showImage" v-show="showImage != ''" @changeImg='changeImg'></mask-img>
   </div>
 </template>
 
 <script>
 import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
+import MaskImg from '../components/mask-img'
 import { MANAGE_DETAIL } from "../assets/data/manageData";
 import { NAVIGATORList } from "../assets/data/appData";
 export default {
-  name: "Detail",
+  name: "Manage",
   data() {
     return {
       title: "",
       manageLeftList: [],
       showLeft: 1,
       manageId: 0,
-      manageDetail: MANAGE_DETAIL
+      manageDetail: MANAGE_DETAIL,
+      showImage: ''
     };
   },
   components: {
     DetailNav,
     LeftTab,
+    MaskImg
   },
   mounted() {
     this.manageId = this.$route.query.id;
-    this.title = NAVIGATORList[1].label;
-    NAVIGATORList[1].subNav.forEach((item) => {
+    this.title = NAVIGATORList[this.showLeft].label;
+    NAVIGATORList[this.showLeft].subNav.forEach((item) => {
       this.manageLeftList.push(item.label);
     });
   },
@@ -75,6 +84,12 @@ export default {
       this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
       this.manageId = index;
     },
+    watchImg(item) {
+      this.showImage = item.img
+    },
+    changeImg() {
+      this.showImage = ''
+    }
   },
   watch: {
     $route() {
@@ -163,6 +178,29 @@ export default {
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+      .manage-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .manage-box {
+          width: 250px;
+          margin-right: 30px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          img {
+            width: 250px;
+            height: 164px;
+          }
+          div{
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+          }
+        }
+        .manage-box:nth-child(3n){
+          margin-right: 0;
         }
       }
     }

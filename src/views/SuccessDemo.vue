@@ -3,26 +3,27 @@
     <!-- 头部导航栏 -->
     <detail-nav
       :navtitle="title"
-      :navTitleChild="successDemoList[showLeft]"
+      :navTitleChild="successDemoList[demoId]"
     ></detail-nav>
     <div class="success-demo-box">
       <!-- 左边侧边栏 -->
       <left-tab
         :leftTitle="title"
         :LeftList="successDemoList"
-        :showLeft="showLeft"
+        :showLeft="demoId"
         @handleClickLeft="handleClickLeft"
       ></left-tab>
       <div class="success-demo-right">
-        <div class="newscontent">
+        <div class="newscontent" v-if="demoId != 0 && showList">
           <div>
             <nav>
-              <span>{{ successDemoList[showLeft] }}</span>
+              <span>{{ successDemoList[demoId] }}</span>
             </nav>
-            <ul>
+            <ul class="demo-list">
               <li
+                class="demo-item"
                 @click="toSuccessDetail(item)"
-                v-for="(item, index) in successList[showLeft]['totalList'][
+                v-for="(item, index) in successList[demoId]['totalList'][
                   currentPage - 1
                 ].list"
                 :key="index"
@@ -42,37 +43,79 @@
             ></el-pagination>
           </div>
         </div>
+        <!-- 经营范围 -->
+        <div class="content" v-else-if="demoId == 0">
+          <nav>
+            <span>{{ successDemoList[demoId] }}</span>
+          </nav>
+          <div class="only-img">
+            <div
+              class="img-box"
+              v-for="(item, index) in successList[demoId].contentList"
+              :key="index"
+              @click="watchImg(item)"
+            >
+              <img :src="item.img" alt />
+              <!-- <div>{{ item.text }}</div> -->
+            </div>
+          </div>
+        </div>
+        <!-- 项目工程展示 -->
+        <div class="content-detail" v-else>
+          <nav>
+            <span>{{ demoDetail.title }}</span>
+          </nav>
+          <img :src="demoDetail.image" alt="">
+          <!-- <p><span>项目名称:</span> {{demoDetail.title}}</p> -->
+          <p v-show="demoDetail.subtitle"><span>项目说明: </span></p>
+          <p v-show="demoDetail.subtitle">{{demoDetail.subtitle}}</p>
+        </div>
       </div>
     </div>
+    <mask-img :image="showImage" v-show="showImage != ''" @changeImg='changeImg'></mask-img>
   </div>
 </template>
 
 <script>
 import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
-import {SUCCESS_LIST} from '../assets/data/successData'
-
+import MaskImg from '../components/mask-img'
+import { SUCCESS_LIST } from "../assets/data/successData";
+import { NAVIGATORList } from "../assets/data/appData";
 export default {
   name: "SuccessDemo",
   data() {
     return {
-      title: "项目案例",
-      successDemoList: ["成功案例"],
-      showLeft: 0,
+      title: "",
+      successDemoList: [],
+      showLeft: 3,
+      demoId: 0,
       successList: SUCCESS_LIST,
       currentPage: 1, //当前页码
       totalNum: 5, //文章总数量
+      showList: true, //展示列表
+      showImage: '',  //图片放大连接
+      demoDetail: {}
     };
   },
   components: {
     DetailNav,
     LeftTab,
+    MaskImg
   },
-  methods:{
+  mounted() {
+    this.demoId = this.$route.query.id;
+    this.title = NAVIGATORList[this.showLeft].label;
+    NAVIGATORList[this.showLeft].subNav.forEach((item) => {
+      this.successDemoList.push(item.label);
+    });
+  },
+  methods: {
     // 左侧点击
     handleClickLeft(index) {
       this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
-      this.showLeft = index
+      this.demoId = index;
+      this.showList = true
     },
     // 切换下标
     currentPageClick(currentPage) {
@@ -80,16 +123,24 @@ export default {
       this.currentPage = currentPage;
     },
     toSuccessDetail(item) {
-      console.log("项目详情")
-      let routeData = this.$router.resolve({
-        name: "SuccessDetail",
-        query: {
-          id: item.id
-        }
-      });
-      window.open(routeData.href, "_blank");
+      console.log("项目详情");
+      this.showList = false
+      this.demoDetail = item
+    },
+    watchImg(item) {
+      this.showImage = item.img
+    },
+    changeImg() {
+      this.showImage = ''
     }
-  }
+  },
+  watch: {
+    $route() {
+      if (this.$route.query.id != this.demoId) {
+        this.demoId = this.$route.query.id;
+      }
+    },
+  },
 };
 </script>
 
@@ -104,7 +155,7 @@ export default {
 }
 
 ._activeli {
-  color:  #104c8b !important;
+  color: #104c8b !important;
   cursor: pointer !important;
 }
 
@@ -142,7 +193,74 @@ export default {
     background: #ffffff;
     min-height: 100vh;
     margin-bottom: 40px;
-    
+    .content-detail,
+    .content {
+      width: 934px;
+      max-height: 820px;
+      background: #ffffff;
+      margin-left: 17px;
+      margin-bottom: 40px;
+      @include displayflex(space-between, center, column, nowrap);
+      @extend .box-border;
+      padding: 0 40px;
+      & > nav {
+        width: 100%;
+        height: 73px;
+        @include font-style(PingFangSC-Semibold, 20px, #104c8b, 600);
+        border-bottom: 2px solid #dbdbdb;
+        @include displayflex(flex-end, flex-start, column, nowrap);
+        & > span {
+          padding-bottom: 15px;
+          border-bottom: 2px solid #104c8b;
+          margin-bottom: -2px;
+        }
+      }
+    }
+    .content-detail{
+      img{
+        margin-top: 10px;
+        width: 100%;
+        height: 400px;
+      }
+      p{
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        span{
+          font-weight: 600;
+        }
+      }
+      p:nth-child(2n) {
+        margin-top: 20px;
+      }
+      p:last-child{
+        text-indent: 2em;
+      }
+    }
+    .only-img {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .img-box {
+        width: 250px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        img {
+          width: 250px;
+          height: 164px;
+        }
+        div {
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+        }
+      }
+      .img-box:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -373,12 +491,12 @@ export default {
         font-size: 14px !important;
         @include font-style(PingFangSC-Regular, 14px, #3a3a3a, 400);
         &:hover {
-          background: #c52e0f !important;
+          background: #104c8b !important;
           color: #fff !important;
         }
       }
       & > .active {
-        background: #c52e0f !important;
+        background: #104c8b !important;
         color: #fff;
       }
     }

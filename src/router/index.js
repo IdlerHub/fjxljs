@@ -9,7 +9,7 @@ import Column from "../views/Column";
 import Technology from "../views/Technology";
 import ContactUs from "../views/ContactUs";
 import NewsContent from "../views/NewsContent";
-import SuccessDetail from "../views/SuccessDetail";
+import ColumnDetail from "../views/ColumnDetail";
 
 Vue.use(VueRouter);
 
@@ -60,9 +60,9 @@ const routes = [
     component: NewsContent,
   },
   {
-    path: "/successDetail",
-    name: "SuccessDetail",
-    component: SuccessDetail,
+    path: "/columnDetail",
+    name: "ColumnDetail",
+    component: ColumnDetail,
   },
 ];
 
