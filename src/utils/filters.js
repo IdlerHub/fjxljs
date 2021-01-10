@@ -1,17 +1,23 @@
-const HomeNavFilter = name => {
-  switch(name) {
-    case 'Home':
-      return 0
-    case 'Detail':
+const HomeNavFilter = (name) => {
+  switch (name) {
+    case "Home":
+      return 0;
+    case "Detail":
       return 1;
-    case 'News':
+    case "Manage":
       return 2;
-    case 'SuccessDemo':
+    case "News":
       return 3;
-    case 'ContactUs':
+    case "SuccessDemo":
       return 4;
+    case "Column":
+      return 5;
+    case "Technology":
+      return 6;
+    case "ContactUs":
+      return 7;
     default:
-    return 9999;
+      return 0;
   }
   // 详情
   // if (currentPath1 === "detail") {
@@ -36,8 +42,6 @@ const HomeNavFilter = name => {
   //   return 8;
   // }
 };
-
-
 
 export default {
   HomeNavFilter,

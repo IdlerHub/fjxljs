@@ -120,7 +120,7 @@ export const NEWS_LIST = [
             id: 2653,
             type: 4,
             title:
-              "关于使用网上老年大学 APP，积极响应国务院 “切实解决老年人运用智能技术困难”的实施办法",
+              "关于使用福建新朗建设有限公司 APP，积极响应国务院 “切实解决老年人运用智能技术困难”的实施办法",
             image: "0",
             file_url: "0",
             file_name: null,
@@ -137,7 +137,7 @@ export const NEWS_LIST = [
             id: 2636,
             type: 4,
             title:
-              "中国老年大学协会教材指导委员会第二次全体会议与会代表到我校考察指导",
+              "福建新朗建设有限公司协会教材指导委员会第二次全体会议与会代表到我校考察指导",
             image: "0",
             file_url: "0",
             file_name: null,
@@ -153,7 +153,7 @@ export const NEWS_LIST = [
           {
             id: 2634,
             type: 4,
-            title: "全国专家学者齐聚南宁共探老年大学教育事业",
+            title: "全国专家学者齐聚南宁共探新朗建设有限公司教育事业",
             image: "0",
             file_url: "0",
             file_name: null,
@@ -169,7 +169,7 @@ export const NEWS_LIST = [
           {
             id: 2633,
             type: 4,
-            title: "关于全国老年大学统编教材推广使用的通知",
+            title: "关于全国新朗建设有限公司统编教材推广使用的通知",
             image: "0",
             file_url: "0",
             file_name: null,
@@ -185,7 +185,7 @@ export const NEWS_LIST = [
           {
             id: 2622,
             type: 4,
-            title: "中国老年大学协会考察团来盛泉考察调研",
+            title: "福建新朗建设有限公司协会考察团来盛泉考察调研",
             image: "0",
             file_url: "0",
             file_name: null,

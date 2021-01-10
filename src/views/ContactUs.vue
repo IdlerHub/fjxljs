@@ -56,6 +56,7 @@ export default {
   },
   methods: {
     handleClickLeft(index) {
+      this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
       this.showLeft = index;
     },
   },

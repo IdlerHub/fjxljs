@@ -2,80 +2,107 @@ export const FRIENDLY_LINK = [
   {
     id: 0,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 1,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 2,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 3,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 4,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 5,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 6,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 7,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
   {
     id: 8,
     link: "http://www.coc.gov.cn/",
-    linkName: "中国建造师网"
+    linkName: "福建建造师网"
   },
 ]
 
 export const NAVIGATORList = [
   {
-    label: "公司概况",
+    label: "关于新朗",
     href: "Detail",
     subNav: [
       { label: "公司简介" },
-      { label: "公司文化" },
-      { label: "企业资质" }
+      { label: "新朗愿景" },
+      { label: "新朗文化" },
+      { label: "公司荣誉" },
+      { label: "董事长致辞" }
     ]
   },
   {
-    label: "新闻资讯",
+    label: "企业管理",
+    href: "Manage",
+    subNav:[
+      {label: "管理团队"},
+      {label: "组织结构"},
+      {label: "文化活动"},
+    ]
+  },
+  {
+    label: "新闻中心",
     href: "News",
     subNav: [
-      { label: "行业动态" },
-      { label: "公司新闻" },
+      { label: "公司动态" },
+      { label: "行业新闻" },
     ]
   },
   {
     label: "项目案例",
     href: "SuccessDemo",
     subNav: [
-      { label: "成功案例" },
+      { label: "经营范围" },
+      { label: "工程展示" },
     ]
   },
   {
-    label: "联系我们",
+    label: "党建专栏",
+    href: "Column",
+    subNav: [
+      { label: "党建工作" },
+      { label: "党建风采" },
+    ]
+  },
+  {
+    label: "技术中心",
+    href: "Technology",
+    subNav: [
+      { label: "技术专利" },
+    ]
+  },
+  {
+    label: "服务中心",
     href: "ContactUs",
     subNav: [
-      { label: "联系方式" },
+      { label: "联系我们" },
     ]
   },
 ]

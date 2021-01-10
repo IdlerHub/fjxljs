@@ -1,55 +1,73 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home'
-import Detail from '../views/Detail'
-import News from '../views/News'
-import SuccessDemo from '../views/SuccessDemo'
-import ContactUs from '../views/ContactUs'
-import NewsContent from '../views/NewsContent'
-import SuccessDetail from '../views/SuccessDetail'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home";
+import Detail from "../views/Detail";
+import Manage from "../views/Manage";
+import News from "../views/News";
+import SuccessDemo from "../views/SuccessDemo";
+import Column from "../views/Column";
+import Technology from "../views/Technology";
+import ContactUs from "../views/ContactUs";
+import NewsContent from "../views/NewsContent";
+import SuccessDetail from "../views/SuccessDetail";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/detail',
-    name: 'Detail',
-    component: Detail
+    path: "/detail",
+    name: "Detail",
+    component: Detail,
   },
   {
-    path: '/news',
-    name: 'News',
-    component: News
+    path: "/manage",
+    name: "Manage",
+    component: Manage,
   },
   {
-    path: '/successDemo',
-    name: 'SuccessDemo',
-    component: SuccessDemo
+    path: "/news",
+    name: "News",
+    component: News,
   },
   {
-    path: '/contactUs',
-    name: 'ContactUs',
-    component: ContactUs
+    path: "/successDemo",
+    name: "SuccessDemo",
+    component: SuccessDemo,
   },
   {
-    path: '/newsDetail',
-    name: 'NewsContent',
-    component: NewsContent
+    path: "/column",
+    name: "Column",
+    component: Column,
   },
   {
-    path: '/successDetail',
-    name: 'SuccessDetail',
-    component: SuccessDetail
-  }
-]
+    path: "/technology",
+    name: "Technology",
+    component: Technology,
+  },
+  {
+    path: "/contactUs",
+    name: "ContactUs",
+    component: ContactUs,
+  },
+  {
+    path: "/newsDetail",
+    name: "NewsContent",
+    component: NewsContent,
+  },
+  {
+    path: "/successDetail",
+    name: "SuccessDetail",
+    component: SuccessDetail,
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

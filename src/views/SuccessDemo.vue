@@ -71,6 +71,7 @@ export default {
   methods:{
     // 左侧点击
     handleClickLeft(index) {
+      this.$router.push(`/${this.$route.path.split("/")[1]}?id=${index}`);
       this.showLeft = index
     },
     // 切换下标
