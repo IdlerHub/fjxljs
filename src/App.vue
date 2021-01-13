@@ -59,16 +59,31 @@
 
     <!-- 底部友情链接 -->
     <footer class="fjxl-description">
-      <p>友情链接</p>
       <div class="friendly-link">
-        <span v-for="(fLink, fIndex) in friendlyLink" :key="fIndex">
-          <a :href="fLink.link" target="_blank">{{ fLink.linkName }}</a>
-          <span v-if="fIndex != friendlyLink.length - 1"> | </span>
-        </span>
+        <p>
+          地址：{{ companyInfo.address }}，邮政编码：{{ companyInfo.postaCode }}
+        </p>
       </div>
-      <div>
+
+      <div class="beian">
+        <p>
+          ©2020 福建新朗建设有限公司版权所有 备案号:
+          <a href="https://beian.miit.gov.cn">【闽ICP备2021000041号-1】</a>
+          <img src="./assets/images/备案图标.png" alt /> <span>闽公网安备</span>
+        </p>
+      </div>
+      <!-- <div>
         地址：{{companyInfo.address}}，邮政编码：{{companyInfo.postaCode}} 办公室电话：{{companyInfo.phone}}
         传真：{{companyInfo.faxNumber}} 电子邮箱：{{companyInfo.email}}
+      </div> -->
+      <div class="friendly-link">
+        <div>
+          <span>友情链接: </span>
+          <span v-for="(fLink, fIndex) in friendlyLink" :key="fIndex">
+            <a :href="fLink.link" target="_blank">{{ fLink.linkName }}</a>
+            <span v-if="fIndex != friendlyLink.length - 1"> | </span>
+          </span>
+        </div>
       </div>
       <div>
         本站最佳浏览效果：1024*768分辨率/建议使用Chrome浏览器或微软公司浏览器IE11以上
@@ -78,7 +93,11 @@
 </template>
 
 <script>
-import { FRIENDLY_LINK, NAVIGATORList, COMPANY_INFO } from "../src/assets/data/appData";
+import {
+  FRIENDLY_LINK,
+  NAVIGATORList,
+  COMPANY_INFO,
+} from "../src/assets/data/appData";
 import Filter from "./utils/filters";
 
 export default {
@@ -88,7 +107,7 @@ export default {
       navigatorList: NAVIGATORList, //nav栏
       friendlyLink: FRIENDLY_LINK, //友情链接
       oldSelected: [],
-      companyInfo: COMPANY_INFO //企业信息
+      companyInfo: COMPANY_INFO, //企业信息
     };
   },
   methods: {
@@ -121,8 +140,8 @@ export default {
   },
   computed: {
     nav: function() {
-        const name = this.$route.name;
-        return Filter.HomeNavFilter(name);
+      const name = this.$route.name;
+      return Filter.HomeNavFilter(name);
     },
   },
 };
@@ -235,48 +254,58 @@ export default {
   min-width: 1200px;
   height: 230px;
   padding-top: 45px;
-
-  p {
+  .beian {
     font-size: 16px;
     color: #e0e0e0;
     letter-spacing: 0.34px;
+    a {
+      color: #ffffff;
+      &:hover {
+        color: #409eff;
+      }
+    }
+    p {
+      height: 30px;
+      line-height: 30px;
+    }
   }
-
-  div {
-    &:nth-child(2) {
-      height: 60px;
-      line-height: 60px;
-      font-size: 14px;
-      color: #c3c3c3;
+  .friendly-link {
+    p {
+      font-size: 16px;
+      color: #e0e0e0;
       letter-spacing: 0.34px;
-      margin-bottom: 15px;
+    }
 
-      a {
-        text-decoration: none;
-      }
-
-      a:link {
+    div {
+      &:nth-child(2) {
+        font-size: 14px;
         color: #c3c3c3;
+        letter-spacing: 0.34px;
+        margin-bottom: 15px;
+
+        a {
+          text-decoration: none;
+        }
+
+        a:link {
+          color: #c3c3c3;
+        }
+
+        a:visited {
+          color: #c3c3c3;
+        }
       }
-
-      a:visited {
-        color: #c3c3c3;
-      }
     }
+  }
+  div {
+    font-size: 12px;
+    color: #8f8f8f;
+    letter-spacing: 0;
+    line-height: 21px;
+  }
+  p {
+    height: 30px;
 
-    &:nth-child(3) {
-      font-size: 12px;
-      color: #8f8f8f;
-      letter-spacing: 0;
-      line-height: 21px;
-    }
-
-    &:nth-child(4) {
-      font-size: 12px;
-      color: #8f8f8f;
-      letter-spacing: 0;
-      line-height: 21px;
-    }
   }
 }
 

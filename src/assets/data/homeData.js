@@ -2,7 +2,7 @@ export const carousel = {
   head: [
     //行业动态右侧图(各个工程的第一个项目)
     {
-      id: 0,
+      id: 1,
       title: "清流楼下至下井段公路改建工程",
       subtitle: "工程总造价31356594元",
       image: require("../images/demo/清流楼下至下井段公路改建工程.png"),
@@ -10,7 +10,7 @@ export const carousel = {
       createtime: "2020年1月1日",
     },
     {
-      id: 0,
+      id: 2,
       title: "凤凰城封顶",
       subtitle: "",
       image: require("../images/demo/凤凰城封顶.png"),
@@ -18,7 +18,7 @@ export const carousel = {
       createtime: "2020年1月1日",
     },
     {
-      id: 0,
+      id: 3,
       title: "清流县姚坊大桥危桥改造工程",
       subtitle: "",
       image: require("../images/demo/清流县姚坊大桥危桥改造工程.png"),

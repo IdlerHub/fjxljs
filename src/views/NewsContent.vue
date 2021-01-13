@@ -71,12 +71,17 @@ export default {
     DetailNav,
   },
   mounted() {
-    this.setArticle();
+    let id = this.$route.query.id
+    this.setArticle(id);
   },
   methods: {
     // 根据id获取对应文章
-    setArticle() {
-      this.articlecont = INDUSTRY_CONTENT[0];
+    setArticle(id) {
+      INDUSTRY_CONTENT.forEach(item=>{
+        if(item.id == id) {
+          this.articlecont = item
+        }
+      })
     },
     changeartsize() {
       let size = 18;

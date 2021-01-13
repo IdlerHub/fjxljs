@@ -1,18 +1,13 @@
 export const FRIENDLY_LINK = [
   {
-    id: 0,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
-  },
-  {
     id: 1,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
+    link: "http://zjt.fujian.gov.cn/",
+    linkName: "福建省住房和城乡建设厅",
   },
   {
     id: 2,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
+    link: "http://www.ccgp.gov.cn/",
+    linkName: "福建省水利厅",
   },
   {
     id: 3,
@@ -21,28 +16,13 @@ export const FRIENDLY_LINK = [
   },
   {
     id: 4,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
+    link: "http://rcpu.cwun.org/",
+    linkName: "全国水利建设市场信用信息平台",
   },
   {
     id: 5,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
-  },
-  {
-    id: 6,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
-  },
-  {
-    id: 7,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
-  },
-  {
-    id: 8,
-    link: "http://www.coc.gov.cn/",
-    linkName: "福建建造师网",
+    link: "http://www.cweun.org/",
+    linkName: "中国水利工程协会官网",
   },
 ];
 
@@ -101,10 +81,10 @@ export const NAVIGATORList = [
 ];
 
 export const COMPANY_INFO = {
-  address: "福建省泉州市丰泽区安吉路闻馨一品3号楼201单元",
-  phone: "0594-22335888",
-  faxNumber: "0594-98769984",
-  email: "33669988@163.com",
+  address: "福建省三明市清流县龙津镇龙城街246号二楼",
+  // phone: "0594-22335888",
+  // faxNumber: "0594-98769984",
+  // email: "33669988@163.com",
   webUrl: "www.fjxljs.com",
-  postaCode: "54466", //邮政编码
+  postaCode: "365300", //邮政编码
 };

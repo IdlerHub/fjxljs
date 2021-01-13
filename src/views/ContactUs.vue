@@ -21,14 +21,15 @@
             </nav>
           </div>
           <div class="contact-address">
-            <p>地址：{{ companyInfo.address }}，</p>
-            <p>电话: {{ companyInfo.phone }}</p>
+            <p>地 址：{{ companyInfo.address }}</p>
+            <p>邮政编码：{{ companyInfo.postaCode }}</p>
+            <p>官网地址: {{ companyInfo.webUrl }}</p>
+
+            <!-- <p>电话: {{ companyInfo.phone }}</p>
             <p>传真：{{ companyInfo.faxNumber }}</p>
-            <p>电子邮箱：{{ companyInfo.email }}</p>
+            <p>电子邮箱：{{ companyInfo.email }}</p> -->
           </div>
-          <div class="contact-map">
-            
-          </div>
+          <div class="contact-map"></div>
         </div>
       </div>
     </div>
@@ -39,13 +40,14 @@
 import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
 import { COMPANY_INFO } from "../../src/assets/data/appData";
+import { NAVIGATORList } from "../assets/data/appData";
 
 export default {
   name: "ContanctUs",
   data() {
     return {
-      title: "联系我们",
-      contanctList: ["联系方式"],
+      title: "",
+      contanctList: [],
       contanctId: 0,
       showLeft: 6,
       companyInfo: COMPANY_INFO,
@@ -55,11 +57,11 @@ export default {
     DetailNav,
     LeftTab,
   },
-   mounted() {
+  mounted() {
     this.contanctId = this.$route.query.id;
     this.title = NAVIGATORList[this.showLeft].label;
     NAVIGATORList[this.showLeft].subNav.forEach((item) => {
-      this.manageLeftList.push(item.label);
+      this.contanctList.push(item.label);
     });
   },
   methods: {

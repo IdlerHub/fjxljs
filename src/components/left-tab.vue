@@ -76,7 +76,8 @@ export default {
   }
   $pd-lf: padding-left;
   .navlefttitle {
-    background: url("../assets/images/newsnav_img1.png");
+    // background: url("../assets/images/newsnav_img1.png");
+    background:#095ab1;
     background-size: 100% 100%;
     width: 100%;
     height: 80px;

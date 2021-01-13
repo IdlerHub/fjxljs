@@ -18,7 +18,7 @@
         <section class="aboutus">
           <div class="about-us-img">
             <img
-              src="https://images.mituo.cn/mui005/upload/201801/1516003874.jpg"
+              src="../assets/images/about.jpg"
               alt
             />
           </div>
@@ -157,7 +157,7 @@ export default {
     },
     toSwiperDetial(slide) {
       console.log("轮播详情");
-      this.$router.push({name: 'SuccessDemo', query: {id: 0}})
+      this.$router.push({name: 'SuccessDemo', query: {id: slide.id}})
     },
     toAboutDetail() {
       console.log("去公司简章")
