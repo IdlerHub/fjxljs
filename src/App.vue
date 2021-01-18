@@ -3,7 +3,7 @@
     <header class="header">
       <div class="logo-img">
         <!--背景图片-->
-        <!-- <img src="./assets/logo.png" /> -->
+        <img src="./assets/logo.png" />
       </div>
       <!-- <p class="dialog-search">
         <el-input placeholder="请输入要查询的内容" v-model="searchKey" @keyup.enter.native="handleSearch">
@@ -69,7 +69,7 @@
         <p>
           ©2020 福建新朗建设有限公司版权所有 备案号:
           <a href="https://beian.miit.gov.cn">【闽ICP备2021000041号-1】</a>
-          <img src="./assets/images/备案图标.png" alt /> <span>闽公网安备</span>
+          <img src="./assets/images/beian.png" alt /> <span>闽公网安备</span>
         </p>
       </div>
       <!-- <div>
@@ -161,7 +161,7 @@ export default {
 // 头部
 .header {
   width: 1200px;
-  height: 200px;
+  height: 300px;
   padding: 0 calc((100% - 1200px) / 2);
   color: white;
   display: flex;
@@ -174,10 +174,11 @@ export default {
   .logo-img {
     width: 100%;
     height: 150px;
-
     img {
-      width: 100px;
-      height: 100px;
+      // width: 100px;
+    // margin-left: -30px;
+      width: 300px;
+      // height: 100px;
     }
   }
 

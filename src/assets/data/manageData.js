@@ -65,7 +65,7 @@ export const MANAGE_DETAIL = [
       `新签合同额10亿元：`,
       `随着公司资质的完善、信用等级的提升，专业公司的全面发力、市场机制的纵深拓展，到2025年，年新签合同额超10亿元，施工产值达8个亿。`,
       `员工收入翻一番：`,
-      `公司将启动“和谐企业.幸福员工”计划，致力于提高员工福利待遇，确保员工收入在五年内同比翻一番；通过员工入股集团自营项目和开拓集团自营分公司，强化为自己做事为自己打工的心态，真正实现“企强员富”的路港目标。`,
+      `公司将启动“和谐企业.幸福员工”计划，致力于提高员工福利待遇，确保员工收入在五年内同比翻一番；通过员工入股集团自营项目和开拓集团自营分公司，强化为自己做事为自己打工的心态，真正实现“企强员富”的新朗目标。`,
       `新增一级资质：`,
       `我们在2018年底顺利取得福建省住房和城乡建设厅颁发的公路工程施工总承包二级资质；未来五年我们将继续发起对其他专业资质的冲刺，进一步提升集团的自身实力，为集团涉足更为广阔的市场领域提供强有力的支撑。`,
     ],
@@ -76,23 +76,23 @@ export const MANAGE_DETAIL = [
     type: "img-text",
     content: [
       {
-        img:　require("../images/manage/2020年公司中秋晚宴.jpg"),
+        img:　require("../images/manage/2020-zhongqiu.jpg"),
         text: `2020年公司中秋晚宴`
       },
       {
-        img:　require("../images/manage/2020年宁德旅游.jpg"),
+        img:　require("../images/manage/2020-ningdeilvyou.jpg"),
         text: `2020年宁德旅游`
       },
       {
-        img:　require("../images/manage/公司慰问.jpg"),
+        img:　require("../images/manage/gongsiweiwen.jpg"),
         text: `公司慰问`
       },
       {
-        img:　require("../images/manage/户外拓展运动.jpg"),
+        img:　require("../images/manage/huwaituozhan.jpg"),
         text: `户外拓展运动`
       },
       {
-        img:　require("../images/manage/员工踏青.jpg"),
+        img:　require("../images/manage/yuangongtaqin.jpg"),
         text: `员工踏青`
       }
     ],
