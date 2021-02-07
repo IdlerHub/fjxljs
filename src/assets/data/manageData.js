@@ -50,7 +50,7 @@ export const MANAGE_DETAIL = [
         title: `财务部`,
         text: [
           `财务审计部作为公司的核心部门，主要负责制订、实施、监督、检查各项财务管理制度和物资管理制度，保证公司财务管理和物资管理的规范化；正确进行会计核算，对本公司的各项财务收支和经济活动实行反映和监督；定期编制财务报表。同时着眼于企业未来的经营活动，有效地履行预测、考核等职能，对企业现在和未来的财务状况及获利能力作出评价。`,
-          `财务部是一个团结友爱、互助互信、积极拼搏的大家庭。工作中，我们相互扶持、相互信任；生活中我们相互关心。我们团结，我们就是一个整体；我们积极，我们不会被困难吓倒；我们拼搏，我们敢于迎接挑战，我们正迈开步伐与集团公司一起进步，一起发展，一起壮大，愿以严谨、高效的工作作风协助公司领导做出正确的经济决策，提高效益，增强企业在市场上的竞争力。`
+          `财务部是一个团结友爱、互助互信、积极拼搏的大家庭。工作中，我们相互扶持、相互信任；生活中我们相互关心。我们团结，我们就是一个整体；我们积极，我们不会被困难吓倒；我们拼搏，我们敢于迎接挑战，我们正迈开步伐与集团公司一起进步，一起发展，一起壮大，愿以严谨、高效的工作作风协助公司领导做出正确的经济决策，提高效益，增强企业在市场上的竞争力。`,
         ],
       },
     ],
@@ -58,16 +58,11 @@ export const MANAGE_DETAIL = [
   },
   {
     title: "组织结构",
-    type: "title",
+    type: "img",
     content: [
-      `组织结构`,
-      `回首八年征途，我们历尽艰险，但成绩斐然；展望未来航程，新朗人信心百倍。`,
-      `新签合同额10亿元：`,
-      `随着公司资质的完善、信用等级的提升，专业公司的全面发力、市场机制的纵深拓展，到2025年，年新签合同额超10亿元，施工产值达8个亿。`,
-      `员工收入翻一番：`,
-      `公司将启动“和谐企业.幸福员工”计划，致力于提高员工福利待遇，确保员工收入在五年内同比翻一番；通过员工入股集团自营项目和开拓集团自营分公司，强化为自己做事为自己打工的心态，真正实现“企强员富”的新朗目标。`,
-      `新增一级资质：`,
-      `我们在2018年底顺利取得福建省住房和城乡建设厅颁发的公路工程施工总承包二级资质；未来五年我们将继续发起对其他专业资质的冲刺，进一步提升集团的自身实力，为集团涉足更为广阔的市场领域提供强有力的支撑。`,
+      {
+        img: require("../images/manage/zuzhijiegou.jpg"),
+      },
     ],
     footer: "",
   },
@@ -76,25 +71,25 @@ export const MANAGE_DETAIL = [
     type: "img-text",
     content: [
       {
-        img:　require("../images/manage/2020-zhongqiu.jpg"),
-        text: `2020年公司中秋晚宴`
+        img: require("../images/manage/2020-zhongqiu.jpg"),
+        text: `2020年公司中秋晚宴`,
       },
       {
-        img:　require("../images/manage/2020-ningdeilvyou.jpg"),
-        text: `2020年宁德旅游`
+        img: require("../images/manage/2020-ningdeilvyou.jpg"),
+        text: `2020年宁德旅游`,
       },
       {
-        img:　require("../images/manage/gongsiweiwen.jpg"),
-        text: `公司慰问`
+        img: require("../images/manage/gongsiweiwen.jpg"),
+        text: `公司慰问`,
       },
       {
-        img:　require("../images/manage/huwaituozhan.jpg"),
-        text: `户外拓展运动`
+        img: require("../images/manage/huwaituozhan.jpg"),
+        text: `户外拓展运动`,
       },
       {
-        img:　require("../images/manage/yuangongtaqin.jpg"),
-        text: `员工踏青`
-      }
+        img: require("../images/manage/yuangongtaqin.jpg"),
+        text: `员工踏青`,
+      },
     ],
     footer: "",
   },

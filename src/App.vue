@@ -67,9 +67,9 @@
 
       <div class="beian">
         <p>
-          ©2020 福建新朗建设有限公司版权所有 备案号:
+          Copyright ©2020 福建新朗建设有限公司版权所有 备案号:
           <a href="https://beian.miit.gov.cn">【闽ICP备2021000041号-1】</a>
-          <img src="./assets/images/beian.png" alt /> <span>闽公网安备</span>
+          <img src="./assets/images/beian.png" alt /> <span>闽公网安备 35042302000009号</span>
         </p>
       </div>
       <!-- <div>

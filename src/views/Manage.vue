@@ -43,16 +43,26 @@
             </div>
           </div>
         </div>
+        <!-- 图片 -->
+        <div class="content" v-else-if="manageDetail[manageId].type == 'img'">
+          <div>
+            <img :src="manageDetail[manageId].content[0].img" alt="" />
+          </div>
+        </div>
       </div>
     </div>
-    <mask-img :image="showImage" v-show="showImage != ''" @changeImg='changeImg'></mask-img>
+    <mask-img
+      :image="showImage"
+      v-show="showImage != ''"
+      @changeImg="changeImg"
+    ></mask-img>
   </div>
 </template>
 
 <script>
 import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
-import MaskImg from '../components/mask-img'
+import MaskImg from "../components/mask-img";
 import { MANAGE_DETAIL } from "../assets/data/manageData";
 import { NAVIGATORList } from "../assets/data/appData";
 export default {
@@ -64,13 +74,13 @@ export default {
       showLeft: 1,
       manageId: 0,
       manageDetail: MANAGE_DETAIL,
-      showImage: ''
+      showImage: "",
     };
   },
   components: {
     DetailNav,
     LeftTab,
-    MaskImg
+    MaskImg,
   },
   mounted() {
     this.manageId = this.$route.query.id;
@@ -85,11 +95,11 @@ export default {
       this.manageId = index;
     },
     watchImg(item) {
-      this.showImage = item.img
+      this.showImage = item.img;
     },
     changeImg() {
-      this.showImage = ''
-    }
+      this.showImage = "";
+    },
   },
   watch: {
     $route() {
@@ -193,13 +203,13 @@ export default {
             width: 250px;
             height: 164px;
           }
-          div{
+          div {
             height: 30px;
             line-height: 30px;
             font-size: 16px;
           }
         }
-        .manage-box:nth-child(3n){
+        .manage-box:nth-child(3n) {
           margin-right: 0;
         }
       }

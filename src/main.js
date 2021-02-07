@@ -18,6 +18,13 @@ import seamlessScroll from "vue-seamless-scroll"
 import "babel-polyfill"
 
 
+// import BaiduMap from 'vue-baidu-map'
+
+// Vue.use(BaiduMap, {
+//   // ak 是在百度地图开发者平台申请的密钥 详见 http://lbsyun.baidu.com/apiconsole/key */
+//   ak: '9Wy9bqP6PY2imiMZtp50Aiwf6OOKXigL'
+// })
+
 Vue.config.productionTip = false
 /*UI控件*/
 Vue.use(ElementUI)

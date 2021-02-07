@@ -29,7 +29,25 @@
             <p>传真：{{ companyInfo.faxNumber }}</p>
             <p>电子邮箱：{{ companyInfo.email }}</p> -->
           </div>
-          <div class="contact-map"></div>
+          <div id="container" class="contact-map">
+            <baidu-map
+            map-type="BMAP_HYBRID_MAP"
+              class="bm-view"
+              :center="center"
+              :zoom="zoom"
+              ak="9Wy9bqP6PY2imiMZtp50Aiwf6OOKXigL"
+            >
+             <bm-scale anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-scale>
+              <bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+              <bm-marker
+                :position="center"
+                :dragging="true"
+                animation="BMAP_ANIMATION_BOUNCE"
+              >
+                <bm-label content="福建新朗建设有限公司" :labelStyle="{color: 'red', fontSize : '16px'}" :offset="{width: -35, height: -50}"/>
+              </bm-marker>
+            </baidu-map>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +59,11 @@ import DetailNav from "../components/detail/detail-nav";
 import LeftTab from "../components/left-tab";
 import { COMPANY_INFO } from "../../src/assets/data/appData";
 import { NAVIGATORList } from "../assets/data/appData";
-
+import BaiduMap from "vue-baidu-map/components/map/Map.vue";
+import BmNavigation from "vue-baidu-map/components/controls/Navigation.vue";
+import BmScale from "vue-baidu-map/components/controls/Scale.vue";
+import BmMarker from "vue-baidu-map/components/overlays/Marker.vue";
+import BmLabel from "vue-baidu-map/components/overlays/Label.vue";
 export default {
   name: "ContanctUs",
   data() {
@@ -51,11 +73,18 @@ export default {
       contanctId: 0,
       showLeft: 6,
       companyInfo: COMPANY_INFO,
+      center: { lng: 116.805015, lat: 26.173564 },
+      zoom: 15,
     };
   },
   components: {
     DetailNav,
     LeftTab,
+    BaiduMap,
+    BmNavigation,
+    BmScale,
+    BmMarker,
+    BmLabel,
   },
   mounted() {
     this.contanctId = this.$route.query.id;
@@ -63,6 +92,8 @@ export default {
     NAVIGATORList[this.showLeft].subNav.forEach((item) => {
       this.contanctList.push(item.label);
     });
+    // var map = new BMapGL.Map("container");
+    // var point = new BMapGL.Point(116.404, 39.915);
   },
   methods: {
     handleClickLeft(index) {
@@ -157,6 +188,14 @@ $pd-lf: padding-left;
       color: rgba(58, 58, 58, 1);
       line-height: 40px;
       letter-spacing: 1px;
+    }
+  }
+  .contact-map {
+    width: 100%;
+    height: 400px;
+    .bm-view {
+      width: 100%;
+      height: 100%;
     }
   }
 }
