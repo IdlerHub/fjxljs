@@ -3,27 +3,36 @@
     <div class="an-title">
       <p
         class="title"
-        :class="{ active:!aim }"
+        :class="{ active: !aim }"
         @mouseenter="changeAn(0)"
         @click="navTo(msg[0].href)"
-      >{{msg[0].title}}</p>
+      >
+        {{ msg[0].title }}
+      </p>
       <span class="division-line" v-if="msg.length > 1">|</span>
       <p
         class="title"
         v-if="msg.length > 1"
-        :class="{ active:aim }"
+        :class="{ active: aim }"
         @mouseenter="changeAn(1)"
-      >{{msg[1].title}}</p>
-    </div>
-    <ul class="an-list" :class="{custom:custom}">
-      <li
-        v-for="(item ,index) in currentList['totalList'][0].list"
-        :key="index"
-        @click="toArticleDetail"
       >
-        <span class="number" v-if="custom" :style="{background:colors[index]}">{{index+1}}</span>
-        <div class="word">{{item.title}}</div>
-        <span class="time">{{item.createtime}}</span>
+        {{ msg[1].title }}
+      </p>
+    </div>
+    <ul class="an-list" :class="{ custom: custom }">
+      <li
+        v-for="(item, index) in currentList['totalList'][0].list"
+        :key="index"
+        @click="toArticleDetail(item)"
+      >
+        <span
+          class="number"
+          v-if="custom"
+          :style="{ background: colors[index] }"
+          >{{ index + 1 }}</span
+        >
+        <div class="word">{{ item.title }}</div>
+        <span class="time">{{ item.createtime }}</span>
       </li>
     </ul>
   </div>
@@ -37,26 +46,33 @@ export default {
     return {
       msg: this.anMsg || [],
       colors: ["#C52E0F", "rgba(197,46,15,0.80)", "rgba(197,46,15,0.50)"],
-      aim: 0
+      aim: 0,
     };
   },
   computed: {
-    currentList: function() {
+    currentList: function () {
       return this.msg ? this.msg[this.aim] : {};
-    }
+    },
   },
   methods: {
-    changeAn: function(i) {
+    changeAn: function (i) {
       this.aim = i;
     },
     navTo(href) {
-      console.log("顶部标题",href)
+      console.log("顶部标题", href);
     },
     // 查看文章详情
-    toArticleDetail(){
-      console.log("去详情")
-    }
-  }
+    toArticleDetail(item) {
+      console.log("去详情", item);
+      let routeData = this.$router.resolve({
+        name: "NewsContent",
+        query: {
+          id: item.id
+        }
+      });
+      window.open(routeData.href, "_blank");
+    },
+  },
 };
 </script>
 

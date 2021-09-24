@@ -59,8 +59,8 @@ export default {
   name: "NewsContent",
   data() {
     return {
-      title: "",
-      subTitle: "",
+      title: "新闻中心",
+      subTitle: "行业新闻",
       showFont: true, //展示字体选择
       radio4: "大",
       articlecont: {}, //文章内容
