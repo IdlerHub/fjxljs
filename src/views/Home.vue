@@ -155,12 +155,12 @@ export default {
     swtichBt: function(bl) {
       this.btSwitch = bl;
     },
+    // 轮播详情
     toSwiperDetial(slide) {
-      console.log("轮播详情");
       this.$router.push({name: 'SuccessDemo', query: {id: slide.id}})
     },
+    // 去公司简章
     toAboutDetail() {
-      console.log("去公司简章")
       this.$router.push({name: 'Detail',query:{
         id: 0
       }})

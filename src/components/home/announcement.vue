@@ -21,7 +21,7 @@
     </div>
     <ul class="an-list" :class="{ custom: custom }">
       <li
-        v-for="(item, index) in currentList['totalList'][0].list"
+        v-for="(item, index) in currentList"
         :key="index"
         @click="toArticleDetail(item)"
       >
@@ -51,7 +51,12 @@ export default {
   },
   computed: {
     currentList: function () {
-      return this.msg ? this.msg[this.aim] : {};
+      let currentList = [];
+      this.msg[this.aim].totalList.forEach((item) => {
+        currentList.unshift(...item.list);
+      });
+      // return this.msg ? this.msg[this.aim] : {};
+      return currentList;
     },
   },
   methods: {
@@ -59,16 +64,15 @@ export default {
       this.aim = i;
     },
     navTo(href) {
-      console.log("顶部标题", href);
+      // console.log("顶部标题", href);
     },
     // 查看文章详情
     toArticleDetail(item) {
-      console.log("去详情", item);
       let routeData = this.$router.resolve({
         name: "NewsContent",
         query: {
-          id: item.id
-        }
+          id: item.id,
+        },
       });
       window.open(routeData.href, "_blank");
     },

@@ -463,6 +463,7 @@ export default {
   align-items: center;
   height: 40px;
   margin-top: 32px;
+  margin-bottom: 0;
   .el-pagination {
     & > .el-pager {
       & > li {

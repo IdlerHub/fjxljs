@@ -232,7 +232,7 @@ export default {
 
 .newscontent {
   width: 934px;
-  max-height: 820px;
+  /* max-height: 820px; */
   background: #ffffff;
   margin-left: 17px;
   margin-bottom: 40px;
@@ -447,6 +447,7 @@ export default {
   align-items: center;
   height: 40px;
   margin-top: 32px;
+  margin-bottom: 0;
   .el-pagination {
     & > .el-pager {
       & > li {
