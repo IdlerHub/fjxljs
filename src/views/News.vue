@@ -21,10 +21,10 @@
             <ul>
               <li
                 @click="toDetail(item)"
-                v-for="(item, index) in newsList[newsId]['totalList'][
+                v-for="item in newsList[newsId]['totalList'][
                   currentPage - 1
                 ].list"
-                :key="index"
+                :key="item.id"
               >
                 <span class="item-title">{{ item.title }}</span>
                 <span class="item-createtime">{{ item.createtime }}</span>
@@ -66,11 +66,12 @@ export default {
       newsId: 0,
       newsList: NEWS_LIST,
       currentPage: 1,
-      totalNum: 5, //文章总数量
+      totalNum: 10, //文章总数量
     };
   },
   mounted() {
     this.newsId = this.$route.query.id;
+    this.totalNum = this.newsList[0].totalNum;
     this.title = NAVIGATORList[this.showLeft].label;
     NAVIGATORList[this.showLeft].subNav.forEach((item) => {
       this.newsLeftList.push(item.label);
@@ -85,18 +86,16 @@ export default {
     },
     // 切换下标
     currentPageClick(currentPage) {
-      console.log(currentPage);
       this.currentPage = currentPage;
     },
     toDetail(item) {
-      console.log("去详情", item);
       // this.$router.push({ name: "NewsContent" });
       let routeData = this.$router.resolve({
         name: "NewsContent",
         query: {
           nav: this.newsId,
-          id: item.id
-        }
+          id: item.id,
+        },
       });
       window.open(routeData.href, "_blank");
     },
@@ -382,6 +381,7 @@ $pd-lf: padding-left;
   align-items: center;
   height: 40px;
   margin-top: 32px;
+  margin-bottom: 0;
   .el-pagination {
     & > .el-pager {
       & > li {
