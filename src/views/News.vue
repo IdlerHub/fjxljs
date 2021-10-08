@@ -166,7 +166,7 @@ $pd-lf: padding-left;
 
 .newscontent {
   width: 934px;
-  max-height: 820px;
+  /* max-height: 820px; */
   background: #ffffff;
   margin-left: 17px;
   margin-bottom: 40px;

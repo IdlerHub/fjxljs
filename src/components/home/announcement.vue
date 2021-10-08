@@ -53,7 +53,7 @@ export default {
     currentList: function () {
       let currentList = [];
       this.msg[this.aim].totalList.forEach((item) => {
-        currentList.unshift(...item.list);
+        currentList.push(...item.list);
       });
       // return this.msg ? this.msg[this.aim] : {};
       return currentList;
